@@ -1,0 +1,152 @@
+.ship {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: float 10s infinite;
+  position: fixed;
+  top: 1rem;
+  right:15rem;
+  z-index: 5;
+  @include media-breakpoint-down(md) {
+    // top: 16rem;
+    // right: 20rem;
+    // position: static !important;
+  }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 300ms ease !important;
+}
+
+.dom {
+  width: 9rem;
+  height: 100px;
+  background-color: grey;
+  border-radius: 100px 100px 0 0;
+  transform: translatey(105px);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+
+  @include media-breakpoint-down(md) {
+    width: 6rem;
+  }
+}
+
+.alien {
+  bottom: 0;
+  width: 60%;
+  height: 80%;
+  background-color: rgb(71, 207, 115);
+  position: absolute;
+  bottom: 0;
+  border-radius: 40px 40px 0 0;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(1rem 1rem 3rem var(--main-bg));
+}
+
+.alien::after {
+  display: block;
+  content: '';
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 15px;
+}
+
+.alien::before {
+  display: block;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #000;
+  margin-top: 15px;
+  position: absolute;
+  top: 15px;
+  /*   animation: blink 1s steps(5, start) infinite; */
+  animation: blink2 3s ease-out infinite;
+}
+
+.ship-body {
+  width: 20rem;
+  height: 80px;
+  background-color: rgb(46, 45, 77);
+  border-radius: 50%;
+  border-bottom: 20px solid grey;
+  position: absolute;
+  top: 200px;
+  z-index: 2;
+  filter: drop-shadow(1rem 1.3rem 3rem $black);
+
+  @include media-breakpoint-down(md) {
+    width: 14rem;
+  }
+}
+.ship-body::before {
+  content: '';
+  width: 100px;
+  height: 20px;
+}
+
+.ship-tail {
+  transform: translate(0, 190px);
+  z-index: 0;
+  border-bottom: 200px solid rgb(152, 12, 200);
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-radius: 0 0 10% 10%;
+  height: 16rem;
+  width: 7rem;
+  position: absolute;
+  top: 0;
+  opacity: 0.8;
+
+  @include media-breakpoint-down(md) {
+    width: 7rem;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: rotate(20deg);
+  }
+  25% {
+    transform: translate(150px);
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: translate(140px, 120px);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: translate(-120px, -100px);
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes blink2 {
+  0% {
+    height: 15px;
+  }
+  90% {
+    height: 15px;
+  }
+  95% {
+    height: 0px;
+  }
+  100% {
+    height: 15px;
+  }
+}

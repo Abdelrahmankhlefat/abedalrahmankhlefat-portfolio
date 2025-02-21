@@ -27,7 +27,7 @@ export default function Hero({ className }) {
             <p className="short mt-3" data-aos="flip-down">I'm a Full stack developer Specialized in building and developing exceptional web experiences, currently I'm focused on building Web applications</p>
             <div className="d-flex gap-3">
               <a href="#about" className="btn btn-outline-secondary" >Find more</a>
-              <a href="/Abed-alRahman-Khlefat.pdf" className="btn btn-outline-success" target="_blank" rel="noopener noreferrer">
+              <a href="/AbedalRahmanKhlefat.pdf" className="btn btn-outline-success" target="_blank" rel="noopener noreferrer">
                 View Resume
               </a>
             </div>

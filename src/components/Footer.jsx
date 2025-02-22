@@ -36,9 +36,6 @@ const Footer = () => {
             <p>
               Email: <a href="mailto:abedalrahmankhlefat@gmail.com" className="text-light text-decoration-none footer-link">abedalrahmankhlefat@gmail.com</a>
             </p>
-            <p>
-              Phone: <a href="tel:+962790314950" className="text-light text-decoration-none footer-link">+962 79 031 4950</a>
-            </p>
             <div className="social-icons footer-icons">
               <a href="https://www.linkedin.com/in/abdalrahman-khlefat-884973200/" target="_blank" className="social-icon text-light footer-link">
                 <Image src={Li} className="icon" alt="LinkedIn" width={30} height={30} />

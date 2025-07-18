@@ -1,6 +1,6 @@
-"use client"
+// "use client"
 import React, { useState } from "react"
-import Alien3D from "../components/Alien3d.js"
+// import Alien3D from "../components/Alien3d.js"
 
 export default function Hero({ className }) {
   const [hideAlien, setHideAlien] = useState(false)
@@ -49,7 +49,7 @@ export default function Hero({ className }) {
           {
             !hideAlien &&
             <div className={`${isFading ? 'fade-out' : ''}`}>
-              <Alien3D Action={handleHideAlien} />
+              {/* <Alien3D Action={handleHideAlien} /> */}
             </div>
           }
         </div>

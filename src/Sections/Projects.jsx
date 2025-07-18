@@ -28,10 +28,10 @@ const Projects = () => {
                 <div className="card-body-bottom">
                   <div className="project-images">
                     <div className="img-container project-image project-first-image">
-                      <Image src={CMS} />
+                      <Image alt={'project'} src={CMS} />
                     </div>
                     <div className="img-container project-image project-second-image">
-                      <Image src={CMSAdmin} />
+                      <Image alt={'project'} src={CMSAdmin} />
                     </div>
                   </div>
                   <div className="tags">
@@ -61,10 +61,10 @@ const Projects = () => {
                 <div className="card-body-bottom">
                   <div className="project-images">
                     <div className="img-container project-image project-first-image">
-                      <Image src={GCSLogin} />
+                      <Image alt={'project'} src={GCSLogin} />
                     </div>
                     <div className="img-container project-image project-second-image">
-                      <Image src={GCSHome} />
+                      <Image alt={'project'} src={GCSHome} />
                     </div>
                   </div>
                   <div className="tags">
@@ -93,10 +93,10 @@ const Projects = () => {
                 <div className="card-body-bottom">
                   <div className="project-images">
                     <div className="img-container project-image project-first-image">
-                      <Image src={Todo1} />
+                      <Image alt={'project'} src={Todo1} />
                     </div>
                     <div className="img-container project-image project-second-image">
-                      <Image src={Todo2} />
+                      <Image alt={'project'} src={Todo2} />
                     </div>
                   </div>
                   <div className="tags">
@@ -122,10 +122,10 @@ const Projects = () => {
                 <div className="card-body-bottom">
                   <div className="project-images">
                     <div className="img-container project-image project-first-image">
-                      <Image src={Chat1} />
+                      <Image alt={'project'} src={Chat1} />
                     </div>
                     <div className="img-container project-image project-second-image">
-                      <Image src={Chat2} />
+                      <Image alt={'project'} src={Chat2} />
                     </div>
                   </div>
                   <div className="tags">

@@ -82,7 +82,7 @@ const Experience = function () {
         <Col md="4" className="mx-auto">
           <h3 className="fs-6">Where I worked</h3>
           <div className="vardot-logo" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <Image src={Vardot} />
+            <Image src={Vardot} alt={'vardot'} />
           </div>
 
           <p className="experience-instruction p-3 mt-5">

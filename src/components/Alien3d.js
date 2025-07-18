@@ -6,7 +6,7 @@ import { ShipModel } from "./AlienShip"
 
 export default function Alien3D({ Action }) {
   // Initial position
-  const [position, setPosition] = useState({ top: 400, left: 400 })
+  const [position, setPosition] = useState({ top: 100, left: 100 })
 
   const getRandomPosition = () => {
     const maxTop = window.innerHeight - 300

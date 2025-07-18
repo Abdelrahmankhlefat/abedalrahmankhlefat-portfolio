@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react"
-import Alien3D from "../components/Alien3D.js"
+import Alien3D from "../components/Alien3d.js"
 
 export default function Hero({ className }) {
   const [hideAlien, setHideAlien] = useState(false)

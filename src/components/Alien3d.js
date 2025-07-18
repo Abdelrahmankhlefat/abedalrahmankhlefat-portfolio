@@ -1,16 +1,26 @@
 "use client"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Environment } from "@react-three/drei"
 import { ShipModel } from "./AlienShip"
 
 export default function Alien3D({ Action }) {
-  // Initial position
-  const mobileDevice = window.innerWidth < 991
-  const initTop = mobileDevice ? 100 : 200
-  const initLeft = mobileDevice ? 200 : 1000
+  const [mobileDevice, setMobileDevice] = useState(false)
+  const [position, setPosition] = useState({ top: 200, left: 1000 })
+  const [canvasSize, setCanvasSize] = useState({ width: '300px', height: '400px' })
 
-  const [position, setPosition] = useState({ top: initTop, left: initLeft })
+  useEffect(() => {
+    const isMobile = window.innerWidth < 991
+    setMobileDevice(isMobile)
+
+    const top = isMobile ? 100 : 200
+    const left = isMobile ? 200 : 1000
+    setPosition({ top, left })
+
+    const width = isMobile ? '150px' : '300px'
+    const height = isMobile ? '300px' : '400px'
+    setCanvasSize({ width, height })
+  }, [])
 
   const getRandomPosition = () => {
     const maxTop = window.innerHeight - 300
@@ -26,9 +36,6 @@ export default function Alien3D({ Action }) {
     }
   }
 
-  const canvasWidth = mobileDevice ? '150px' : '300px'
-  const canvasHeight = mobileDevice ? '300px' : '400px'
-
   return (
     <div
       onMouseEnter={handleMouseEnter}
@@ -36,8 +43,8 @@ export default function Alien3D({ Action }) {
         position: "fixed",
         top: `${position.top}px`,
         left: `${position.left}px`,
-        width: canvasWidth,
-        height: canvasHeight,
+        width: canvasSize.width,
+        height: canvasSize.height,
         zIndex: 10,
         transition: "top 0.4s ease, left 0.4s ease",
       }}

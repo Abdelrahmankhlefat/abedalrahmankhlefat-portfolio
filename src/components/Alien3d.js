@@ -6,7 +6,11 @@ import { ShipModel } from "./AlienShip"
 
 export default function Alien3D({ Action }) {
   // Initial position
-  const [position, setPosition] = useState({ top: 100, left: 100 })
+  const mobileDevice = window.innerWidth < 991
+  const initTop = mobileDevice ? 100 : 200
+  const initLeft = mobileDevice ? 200 : 1000
+
+  const [position, setPosition] = useState({ top: initTop, left: initLeft })
 
   const getRandomPosition = () => {
     const maxTop = window.innerHeight - 300
@@ -17,10 +21,13 @@ export default function Alien3D({ Action }) {
   }
 
   const handleMouseEnter = () => {
-    if (window.innerWidth > 991) {
+    if (!mobileDevice) {
       setPosition(getRandomPosition())
     }
   }
+
+  const canvasWidth = mobileDevice ? '150px' : '300px'
+  const canvasHeight = mobileDevice ? '300px' : '400px'
 
   return (
     <div
@@ -29,8 +36,8 @@ export default function Alien3D({ Action }) {
         position: "fixed",
         top: `${position.top}px`,
         left: `${position.left}px`,
-        width: "300px",
-        height: "300px",
+        width: canvasWidth,
+        height: canvasHeight,
         zIndex: 10,
         transition: "top 0.4s ease, left 0.4s ease",
       }}

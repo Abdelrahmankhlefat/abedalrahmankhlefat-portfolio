@@ -20,6 +20,7 @@ import Git from '../../public/git.png';
 import GitHub from '../../public/code.png';
 import BB from '../../public/bb.png';
 import SS from '../../public/icons/salesforce-plain.svg';
+import Three from '../../public/icons/threejs.svg';
 import Linux from '../../public/linux.png';
 import Vardot from '../../public/icons/vardot-logo.webp';
 import UNHCR from '../../public/UNHCR.png';
@@ -49,6 +50,7 @@ const skills = [
   { src: PostMan, alt: 'Postman' },
   { src: Gulp, alt: 'Gulp' },
   { src: Storybook, alt: 'Storybook' },
+  { src: Three, alt: 'Three' },
 ];
 
 const Experience = function () {
@@ -90,7 +92,7 @@ const Experience = function () {
           </p>
 
           <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-dialog modal-lg modal-dialog-centered">
               <div className="modal-content">
                 <div className="modal-header">
                   <h1 className="modal-title fs-5" id="exampleModalLabel">Vardot</h1>

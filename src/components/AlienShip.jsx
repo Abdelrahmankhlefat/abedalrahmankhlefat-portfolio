@@ -11,9 +11,10 @@ export function ShipModel({ onClick }) {
   // Float animation
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime()
-    mesh.current.position.y = Math.sin(t) * 0.5
-    mesh.current.rotation.y += 0.005
-
+    mesh.current.rotation.y = Math.sin(t) * 0.5
+    // mesh.current.rotation.x = Math.sin(t) * 0.8
+    mesh.current.rotation.x = Math.sin(t) * 0.2
+    mesh.current.position.y = Math.sin(t * 2) * 0.2 + 1
   })
 
   return (

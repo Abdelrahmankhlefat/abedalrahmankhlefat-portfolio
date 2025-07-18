@@ -34,17 +34,11 @@ const Footer = () => {
           <div className="col-md-4 mb-3">
             <h5>Contact Me</h5>
             <p>
-              Email: <a href="mailto:abedalrahmankhlefat@gmail.com" className="text-light text-decoration-none footer-link">abedalrahmankhlefat@gmail.com</a>
+              <a href="mailto:abedalrahmankhlefat@gmail.com" className="text-light text-decoration-none footer-link">abedalrahmankhlefat@gmail.com</a>
             </p>
             <div className="social-icons footer-icons">
               <a href="https://www.linkedin.com/in/abdalrahman-khlefat-884973200/" target="_blank" className="social-icon text-light footer-link">
                 <Image src={Li} className="icon" alt="LinkedIn" width={30} height={30} />
-              </a>
-              <a href="https://www.facebook.com/abedalrahman.khlefat/" target="_blank" className="social-icon text-light footer-link">
-                <Image src={Fb} className="icon" alt="Facebook" width={30} height={30} />
-              </a>
-              <a href="https://www.instagram.com/abedalrahmankhlefat/" target="_blank" className="social-icon text-light footer-link">
-                <Image src={Ig} className="icon" alt="Instagram" width={30} height={30} />
               </a>
               <a href="https://github.com/Abdelrahmankhlefat" target="_blank" className="social-icon text-light footer-link">
                 <Image src={Gh} className="icon" alt="GitHub" width={30} height={30} />

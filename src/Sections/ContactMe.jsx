@@ -21,12 +21,6 @@ export default function Contact() {
           <a href="https://www.linkedin.com/in/abdalrahman-khlefat-884973200/" target="_blank" className="social-icon">
             <Image src={Li} className="icon" alt="LinkedIn" width={30} height={30} />
           </a>
-          <a href="https://www.facebook.com/abedalrahman.khlefat/" target="_blank" className="social-icon">
-            <Image src={Fb} className="icon" alt="Facebook" width={30} height={30} />
-          </a>
-          <a href="https://www.instagram.com/abedalrahmankhlefat/" target="_blank" className="social-icon">
-            <Image src={Ig} className="icon" alt="Instagram" width={30} height={30} />
-          </a>
           <a href="https://github.com/Abdelrahmankhlefat" target="_blank" className="social-icon">
             <Image src={Gh} className="icon" alt="GitHub" width={30} height={30} />
           </a>
